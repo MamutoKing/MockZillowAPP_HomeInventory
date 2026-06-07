@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Main{
+public class Main {
      public static void main(String[] args){
 
         Scanner scnr = new Scanner(System.in);
@@ -11,7 +11,7 @@ public class Main{
 
         do {
             // Menu
-            System.out.println("--- Home Inventory Menu ---");
+            System.out.println("\n--- Home Inventory Menu ---");
             System.out.print(" ");
             System.out.print("Type 1 -- To Add Home");
             System.out.print("Type 2 -- To Remove Home");
@@ -27,43 +27,46 @@ public class Main{
                 case 1: 
                     try{
                         System.out.println ("Enter Address:");
-                        address = scnr.nextLine();
+                        String address = scnr.nextLine();
 
                         System.out.println("Enter Square Footage:");
-                        squareFeet = scnr.nextInt();
+                        int squareFeet = scnr.nextInt();
+                        scnr.nextLine();
                     
-                        System.out.print("Enter City");
-                        city = scnr.nextLine();
+                        System.out.print("Enter City:");
+                        String city = scnr.nextLine();
                 
-                        System.out.print("Enter State");
-                        state = scnr.nextLine();
+                        System.out.print("Enter State:");
+                        String state = scnr.nextLine();
                     
-                        System.out.print("Enter Zip Code");
-                        zipCode = scnr.nextInt();
+                        System.out.print("Enter Zip Code:");
+                        int zipCode = scnr.nextInt();
+                        scnr.nextLine();
                     
-                        System.out.print("Sale Status");
-                        status = scnr.nextLine();
+                        System.out.print("Enter Sale Status:");
+                        String saleStatus = scnr.nextLine();
                         
-                        System.out.print("Enter Listing Price");
-                        price = scnr.nextDouble();
+                        System.out.print("Enter Listing Price:");
+                        double listingPrice = scnr.nextDouble();
                     
-                        Home newHome = new Home (int squareFeet, String address, String city, String state, int zipCode, String saleStatus, double listingPrice);
+                        Home newHome = new Home (squareFeet, address, city, state, zipCode, saleStatus, listingPrice);
 
                         System.out.println(inventory.addHome(newHome));
                     } 
+
                     catch (Exception e){
                         System.out.println("Error adding home");
-                        scnr.nextLine(); // clear bad input
+                        
                     }
                     break;
 
                 case 2:
                     try{
-                        System.out.print("Enter Address you wish to remove from Listings: ") 
-                        address = scnr.nextLine();
-                    
-                        System.out.println(inventory.removeHome(address));
+                        System.out.print("Enter Address you wish to remove from Listings: "); 
+                        String removeAddress = scnr.nextLine();
+                        System.out.println(inventory.removeHome(removeAddress));
                     }
+
                     catch(Exception e) {
                         System.out.println("Error removing home");
                     }
@@ -72,9 +75,8 @@ public class Main{
                 case 3:
                     try{
                         System.out.println("Enter Address to Update: ");
-                        address = scnr.nextLine();
-
-                        System.out.println(inventory.updateHome(address, scnr));
+                        String updateAddress = scnr.nextLine();
+                        System.out.println(inventory.updateHome(updateAddress, scnr));
                     }
                     catch (Exception e){
                         System.out.println("Error Updating Home");
