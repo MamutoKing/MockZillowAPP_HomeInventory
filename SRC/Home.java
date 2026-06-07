@@ -20,7 +20,7 @@ public class Home{
             this.saleStatus = saleStatus;
             this.listingPrice = listingPrice;
         }
-        
+
         catch (Exception e) {
             System.out.println("      Failure:"       );
             System.out.println("---------------------");
@@ -42,7 +42,7 @@ public class Home{
         }
 
         catch (Exception e){
-            System.out.println("         Failure:"              );
+            System.out.println("             Failure:"              );
             System.out.println("-----------------------------------");
             System.out.pritnln("Unable to retrieve Home Information");
 
