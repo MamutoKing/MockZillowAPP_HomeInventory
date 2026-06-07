@@ -1,9 +1,10 @@
 # MockZillowAPP_HomeInventory
 
 The Following is a submission for my portfolio project in CSC320 Programing 1.
-The intended is a Application mimiking Zillow and other home-buying applications.
+The intended is an Application mimicking Zillow and other home-buying applications.
 
 there are four Class objects, each with methods to help in  their execution
+
     CLASS Home -- Data
         -Attributes
         -Constructor

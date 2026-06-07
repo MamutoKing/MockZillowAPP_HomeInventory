@@ -44,7 +44,7 @@ public class Home{
         catch (Exception e){
             System.out.println("             Failure:"              );
             System.out.println("-----------------------------------");
-            System.out.pritnln("Unable to retrieve Home Information");
+            System.out.println("Unable to retrieve Home Information");
 
             return "Error retrieving home information";
         }
