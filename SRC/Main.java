@@ -24,10 +24,10 @@ public class Main {
 
                 case 1: 
                     try{
-                        System.out.println ("Enter Address:");
+                        System.out.print("Enter Address:");
                         String address = scnr.nextLine();
 
-                        System.out.println("Enter Square Footage:");
+                        System.out.print("Enter Square Footage:");
                         int squareFeet = scnr.nextInt();
                         scnr.nextLine();
                     

@@ -35,65 +35,72 @@ public class HomeInventory {
 
     // Update
     public String updateHome(String address, Scanner scnr) {
-        try {
-            for (Home home : homeInventory) {
 
-                if (home.getAddress().equals(address)) {
+        int userChoice;
 
-                    System.out.println("1. Square Feet");
-                    System.out.println("2. City");
-                    System.out.println("3. State");
-                    System.out.println("4. Zip Code");
-                    System.out.println("5. Sale Status");
-                    System.out.println("6. Listing Price");
+        do{
+            try {
+                for (Home home : homeInventory) {
 
-                    int choice = scnr.nextInt();
-                    scnr.nextLine();
+                    if (home.getAddress().equals(address)) {
 
-                    switch (choice) {
-                        case 1:
-                            System.out.print("Enter new SqFt: ");
-                            home.setSquareFeet(scnr.nextInt());
-                            break;
+                        System.out.println("1. Square Feet");
+                        System.out.println("2. City");
+                        System.out.println("3. State");
+                        System.out.println("4. Zip Code");
+                        System.out.println("5. Sale Status");
+                        System.out.println("6. Listing Price");
+                        System.out.println("0. Exit Updating House");
 
-                        case 2:
-                            System.out.print("Enter new City: ");
-                            home.setCity(scnr.nextLine());
-                            break;
+                        int choice = scnr.nextInt();
+                        scnr.nextLine();
 
-                        case 3:
-                            System.out.print("Enter new State: ");
-                            home.setState(scnr.nextLine());
-                            break;
+                        switch (choice) {
+                            case 1:
+                                System.out.print("Enter new SqFt: ");
+                                home.setSquareFeet(scnr.nextInt());
+                                break;
 
-                        case 4:
-                            System.out.print("Enter new Zip: ");
-                            home.setZipCode(scnr.nextInt());
-                            break;
+                            case 2:
+                                System.out.print("Enter new City: ");
+                                home.setCity(scnr.nextLine());
+                                break;
 
-                        case 5:
-                            System.out.print("Enter new Status: ");
-                            home.setSaleStatus(scnr.nextLine());
-                            break;
+                            case 3:
+                                System.out.print("Enter new State: ");
+                                home.setState(scnr.nextLine());
+                                break;
 
-                        case 6:
-                            System.out.print("Enter new Price: ");
-                            home.setListingPrice(scnr.nextDouble());
-                            break;
+                            case 4:
+                                System.out.print("Enter new Zip: ");
+                                home.setZipCode(scnr.nextInt());
+                                break;
 
-                        default:
-                            return "Failure: Invalid selection";
+                            case 5:
+                                System.out.print("Enter new Status: ");
+                                home.setSaleStatus(scnr.nextLine());
+                                break;
+
+                            case 6:
+                                System.out.print("Enter new Price: ");
+                                home.setListingPrice(scnr.nextDouble());
+                                break;
+
+                            default:
+                                return "Failure: Invalid selection";
+                        }
+
+                        return "Success: Home updated";
                     }
-
-                    return "Success: Home updated";
-                }
-            }
+                }    
 
             return "Failure: Address not found";
 
-        } catch (Exception e) {
-            return "Failure: Error updating home";
+            } catch (Exception e) {
+                return "Failure: Error updating home";
+            }
         }
+        while (userChoice != 0);
     }
 
     // List
