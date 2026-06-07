@@ -60,5 +60,4 @@ public class Home{
             return "Error retrieving home information";
         }
     }
-
 }
