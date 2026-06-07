@@ -10,12 +10,12 @@ public class Main {
         do {
             // Menu
             System.out.println("\n--- Home Inventory Menu ---");
-            System.out.print(" ");
-            System.out.print("Type 1 -- To Add Home");
-            System.out.print("Type 2 -- To Remove Home");
-            System.out.print("Type 3 -- Update Home Information");
-            System.out.print("Type 4 -- List Homes");
-            System.out.print("Type 5 -- Exit");
+            System.out.println(" ");
+            System.out.println("Type 1 -- To Add Home");
+            System.out.println("Type 2 -- To Remove Home");
+            System.out.println("Type 3 -- Update Home Information");
+            System.out.println("Type 4 -- List Homes");
+            System.out.println("Type 5 -- Exit");
 
             userChoice = scnr.nextInt();
             scnr.nextLine(); // clear buffer
