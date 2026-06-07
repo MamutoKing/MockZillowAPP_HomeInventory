@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HomeInventory {
 
-    private ArrayList<Home> homeInventory = new ArrayList<>();
+    private ArrayList<Home> homeInventory = new ArrayList<>;
 
     // Add
     public String addHome(Home newHome) {
@@ -19,7 +19,7 @@ public class HomeInventory {
     // Remove
     public String removeHome(String address) {
         try {
-            for (int i = 0; i < homeInventory.size(); i++) {
+            for (int i = 0, i < homeInventory.size(); i++)
                 Home home = homeInventory.get(i);
 
                 if (home.getAddress().equals(address)) {
