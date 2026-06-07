@@ -83,7 +83,7 @@ public class Main {
 
                 case 4:
                     try {
-                        System.out.println("/n --- Home Listings ---");
+                        System.out.println("\n --- Home Listings ---");
                         inventory.listHomes();
                     }
                     catch (Exception e){
@@ -93,6 +93,22 @@ public class Main {
                 
                 case 5:
                     System.out.println ("Exiting...");
+                    // File prompt
+                    try{
+                        System.out.print("Print to file? (Y/N): ");
+                        String choice = scnr.nextLine();
+
+                        if (choice.equalsIgnoreCase("y")){
+                            System.out.println(FileManager.printToFile(inventory.getHomes()));
+
+                        }
+                        else{
+                            System.out.println("File will not be printed");
+                        }
+                    }
+                    catch (Exception e){
+                        System.out.println("Error handling file output");
+                        }
                     break;
                 
                 default:
@@ -100,6 +116,5 @@ public class Main {
             }  
         }
         while (userChoice != 5); 
-           
     }
 }

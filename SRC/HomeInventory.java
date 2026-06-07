@@ -110,4 +110,8 @@ public class HomeInventory {
             System.out.println("---------------------");
         }
     }
+
+    public ArrayList<Home> getHomes(){
+        return homeInventory;
+    }
 }
