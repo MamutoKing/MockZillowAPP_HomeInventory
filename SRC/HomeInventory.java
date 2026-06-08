@@ -35,15 +35,13 @@ public class HomeInventory {
 
     // Update
     public String updateHome(String address, Scanner scnr) {
+        try {
+            for (Home home : homeInventory) {
 
-        int userChoice;
+                if (home.getAddress().equals(address)) {
+                    int userChoice;
 
-        do{
-            try {
-                for (Home home : homeInventory) {
-
-                    if (home.getAddress().equals(address)) {
-
+                    do{
                         System.out.println("1. Square Feet");
                         System.out.println("2. City");
                         System.out.println("3. State");
@@ -52,10 +50,10 @@ public class HomeInventory {
                         System.out.println("6. Listing Price");
                         System.out.println("0. Exit Updating House");
 
-                        int choice = scnr.nextInt();
+                        userChoice = scnr.nextInt();
                         scnr.nextLine();
 
-                        switch (choice) {
+                        switch (userChoice) {
                             case 1:
                                 System.out.print("Enter new SqFt: ");
                                 home.setSquareFeet(scnr.nextInt());
@@ -89,18 +87,20 @@ public class HomeInventory {
                             default:
                                 return "Failure: Invalid selection";
                         }
-
-                        return "Success: Home updated";
                     }
-                }    
+                    while (userChoice != 0);
+
+                    return "Success: Home updated";
+                    
+                } 
+            }   
 
             return "Failure: Address not found";
 
-            } catch (Exception e) {
-                return "Failure: Error updating home";
-            }
         }
-        while (userChoice != 0);
+        catch (Exception e) {
+            return "Failure: Error updating home";
+        }
     }
 
     // List

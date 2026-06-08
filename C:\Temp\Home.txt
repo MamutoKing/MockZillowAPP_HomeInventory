@@ -1,0 +1,30 @@
+Square Footage: 
+2400
+Address: 
+2855 Willow Tree Ln
+City: 
+Fort Collins
+State: 
+CO
+Zip Code: 
+80525
+Sale Status: 
+Available
+Listing Price: 
+750000.0
+
+Square Footage: 
+6500
+Address: 
+3266 College Ave
+City: 
+Fort Collins
+State: 
+CO
+Zip Code: 
+80521
+Sale Status: 
+SOLD
+Listing Price: 
+990000.0
+
