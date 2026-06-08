@@ -24,7 +24,7 @@ CO
 Zip Code: 
 80521
 Sale Status: 
-SOLD
+Available
 Listing Price: 
 990000.0
 
